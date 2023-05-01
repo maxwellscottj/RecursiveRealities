@@ -14,7 +14,7 @@ class BareListUsers extends react.Component {
     }
 	
 	getUsers() {
-		const myreq = new Request("/users")
+		const myreq = new Request("./users")
 		fetch(myreq)
 		.then(res => res.json())
 		.then(users => this.setState({ users }))

@@ -24,7 +24,7 @@ class BareUserDetails extends react.Component {
 		const queryParameters = new URLSearchParams(window.location.search)
 		const userID = this.props.userID
 		const errors = JSON.parse(queryParameters.get("errors"))
-		const myreq = new Request("/users/details/"+userID)
+		const myreq = new Request("./users/details/"+userID)
 		fetch(myreq)
 		.then(res => res.json())
 		.then(data => this.setState({ 	userID:data._id,
