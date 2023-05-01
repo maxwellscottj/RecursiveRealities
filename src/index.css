@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color:rgb(16,16,16);
+}
+
+a:visited {
+	color:blue;
+}
+
+.actionButton, input[type=button], input[type=submit], input[type=reset] {
+	background-color: grey;
+	color: aliceblue;
+	border: 2px solid aliceblue;
+	border-radius: 4px;
+	padding: 10px;
+	margin: 5px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
