@@ -25,7 +25,7 @@ class BarePostDetails extends react.Component {
 		const queryParameters = new URLSearchParams(window.location.search)
 		const postID = this.props.postID;
 		const errors = queryParameters.get("postID")===postID?JSON.parse(queryParameters.get("errors")):[];
-		const myreq = new Request("/posts/details/"+postID)
+		const myreq = new Request("./posts/details/"+postID)
 		fetch(myreq)
 		.then(res => res.json())
 		.then(data => this.setState({ 	postID:this.props.postID,

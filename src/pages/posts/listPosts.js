@@ -20,7 +20,7 @@ class BareListPosts extends react.Component {
 	}
 	
 	getPosts() {
-		const myreq = new Request("/posts")
+		const myreq = new Request("./posts")
 		fetch(myreq)
 		.then(res => res.json())
 		.then(posts => this.setState({ posts }))
