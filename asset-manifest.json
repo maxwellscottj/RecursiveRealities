@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/RecursiveRealities/static/css/main.4056d320.css",
-    "main.js": "/RecursiveRealities/static/js/main.d47d8d1e.js",
+    "main.js": "/RecursiveRealities/static/js/main.158fa2b1.js",
     "static/js/787.c4e7f8f9.chunk.js": "/RecursiveRealities/static/js/787.c4e7f8f9.chunk.js",
     "index.html": "/RecursiveRealities/index.html",
     "main.4056d320.css.map": "/RecursiveRealities/static/css/main.4056d320.css.map",
-    "main.d47d8d1e.js.map": "/RecursiveRealities/static/js/main.d47d8d1e.js.map",
+    "main.158fa2b1.js.map": "/RecursiveRealities/static/js/main.158fa2b1.js.map",
     "787.c4e7f8f9.chunk.js.map": "/RecursiveRealities/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4056d320.css",
-    "static/js/main.d47d8d1e.js"
+    "static/js/main.158fa2b1.js"
   ]
 }
