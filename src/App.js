@@ -32,7 +32,7 @@ class App extends Component {
     }
 	
 	getLogin(){
-		const myreq = new Request("/login")
+		const myreq = new Request(`${process.env.REACT_APP_NODE_URL}/login`)
 		fetch(myreq)
 		.then(res => res.json())
 		.then(data => this.setState({loggedIn:data.loggedIn, name:data.name}))
