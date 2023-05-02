@@ -43,7 +43,7 @@ class BareLoginForm extends react.Component {
 			return (
 			<div className={this.props.className}>
 				<p>Welcome {this.state.name}!</p>
-				<form method="post" action={`${process.env.REACT_APP_NODE_URL}/logout`}>
+				<form method="post" action={`${process.env.REACT_APP_NODE_URL}logout`}>
 					<input type="submit" name="submit_button" value="Logout" />
 				</form>
 			</div>
@@ -72,7 +72,7 @@ class BareLoginForm extends react.Component {
 					return (
 						<div className={this.props.className}>
 							<div className='menuContent'>
-								<form method="post" action={`${process.env.REACT_APP_NODE_URL}/login`}>
+								<form method="post" action={`${process.env.REACT_APP_NODE_URL}login`}>
 									<NameField name=""/>
 									<PasswordField/>
 									<input type="submit" name="submit_button" value="Login" />
