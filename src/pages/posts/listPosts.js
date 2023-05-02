@@ -27,7 +27,7 @@ class BareListPosts extends react.Component {
 	}
 	
 	getPermission() {
-		const myreq = new Request("/posts/create")
+		const myreq = new Request(`${process.env.REACT_APP_NODE_URL}posts/create`)
 		fetch(myreq)
 		.then(res => res.json())
 		.then(permission => this.setState({ permission }))
