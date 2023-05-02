@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://rr-node-qfxftdlcva-wn.a.run.app",
+  "proxy": "https://rr-node-qfxftdlcva-wn.a.run.app/",
   "eslintConfig": {
     "extends": [
       "react-app",
