@@ -49,7 +49,7 @@ class BareLoginForm extends react.Component {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
-					"Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Origin": "https://recursive-realities.vercel.app/",
 					"Accept": "application/json",
 				},
 				mode: 'cors',
