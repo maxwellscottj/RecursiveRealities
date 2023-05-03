@@ -57,7 +57,7 @@ class BareLoginForm extends react.Component {
 			return (
 			<div className={this.props.className}>
 				<p>Welcome {this.state.name}!</p>
-				<form method="post" action={`${process.env.REACT_APP_NODE_URL}logout`} onSubmit={useForm}>
+				<form method="post" action={`${process.env.REACT_APP_NODE_URL}logout`}>
 					<input type="submit" name="submit_button" value="Logout" />
 				</form>
 			</div>
