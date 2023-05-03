@@ -57,7 +57,7 @@ class BareLoginForm extends react.Component {
 				method: "POST",
 				body: JSON.stringify(data),
 				headers: { 'Content-Type': 'application/json' },
-				mode: 'no-cors',
+				mode: 'cors',
 				json: true
 				}).then((response) => {
 					  console.log(response);
