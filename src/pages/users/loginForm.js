@@ -4,6 +4,7 @@ import PasswordField from './passwordField'
 import CreateUser from './createUser'
 import RecoverForm from './recoverForm'
 import styled from "styled-components";
+import useForm from "../../useForm";
 
 class BareLoginForm extends react.Component {
 	constructor(props) {
@@ -11,6 +12,7 @@ class BareLoginForm extends react.Component {
 		const queryParameters = new URLSearchParams(window.location.search)
 		const userID = queryParameters.get("userID")?queryParameters.get("userID"):null;
 		this.state = {loggedIn: props.loggedIn, name:props.name, mode:userID==='new'?'signUp':'picker'};
+
 		
 	}
 	
@@ -35,7 +37,20 @@ class BareLoginForm extends react.Component {
 		this.setState({mode:'picker'})
 	}
 	
-	
+	handleSubmit = (e) => {
+		e.preventDefault();
+		console.log("submitted");
+
+		const body = e.target.body.value;
+
+		fetch(`${process.env.REACT_APP_NODE_URL}/login`, {
+				  method: "POST",
+				  body: JSON.stringify(body)
+				}).then((response) => {
+			  console.log(response);
+			  return response.json(); // do something with response JSON
+		});
+	};
 	
 
 	render() {
@@ -43,7 +58,7 @@ class BareLoginForm extends react.Component {
 			return (
 			<div className={this.props.className}>
 				<p>Welcome {this.state.name}!</p>
-				<form method="post" action={`${process.env.REACT_APP_NODE_URL}logout`}>
+				<form method="post" action={`${process.env.REACT_APP_NODE_URL}logout`} onSubmit={useForm}>
 					<input type="submit" name="submit_button" value="Logout" />
 				</form>
 			</div>
@@ -72,7 +87,7 @@ class BareLoginForm extends react.Component {
 					return (
 						<div className={this.props.className}>
 							<div className='menuContent'>
-								<form method="post" action={`${process.env.REACT_APP_NODE_URL}login`}>
+								<form method="post" action={`${process.env.REACT_APP_NODE_URL}login`} onSubmit={useForm}>
 									<NameField name=""/>
 									<PasswordField/>
 									<input type="submit" name="submit_button" value="Login" />
