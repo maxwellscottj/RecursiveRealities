@@ -40,14 +40,18 @@ class BareLoginForm extends react.Component {
 		e.preventDefault();
 		console.log(e.target);
 		console.log(e.target.name)
-		const data = new FormData()
+		let data = []
 		data.append ("name", e.target.name.value)
 		data.append ("password", e.target.password.value)
-		console.log(JSON.stringify(data));
+		console.log(data);
 		
 		fetch(`${process.env.REACT_APP_NODE_URL}login`, {
 				method: "POST",
-				body: JSON.stringify(data)
+				headers: {
+					  Accept: "application/json",
+					  "Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
 				}).then((response) => {
 					  console.log(response);
 					  return response.json(); // do something with response JSON
