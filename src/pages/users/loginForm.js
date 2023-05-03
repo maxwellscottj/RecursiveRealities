@@ -40,9 +40,17 @@ class BareLoginForm extends react.Component {
 		e.preventDefault();
 		console.log(e.target);
 		console.log(e.target.name)
+		/*
 		let data = [];
 		data.append ("name", e.target.name.value);
 		data.append ("password", e.target.password.value);
+		*/
+		const data = Array.from(e.target.elements)
+        .filter((input) => input.name)
+        .reduce(
+          (obj, input) => Object.assign(obj, { [input.name]: input.value }),
+          {}
+        );
 		console.log(data);
 		
 		fetch(`${process.env.REACT_APP_NODE_URL}login`, {
