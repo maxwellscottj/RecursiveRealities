@@ -38,7 +38,7 @@ class BareLoginForm extends react.Component {
 	
 	handleSubmit = (e) => {
 		e.preventDefault();
-		console.log("submitted");
+		console.log(e.target);
 
 		const body = e.target.body.value;
 
