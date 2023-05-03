@@ -40,7 +40,7 @@ class BareLoginForm extends react.Component {
 		e.preventDefault();
 		console.log(e.target);
 		console.log(e.target.name)
-		const data - new FormData()
+		const data = new FormData()
 		data.append ("name", e.target.name.value)
 		data.append ("password", e.target.password.value)
 		console.log(data);
