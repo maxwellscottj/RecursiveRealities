@@ -4,7 +4,6 @@ import PasswordField from './passwordField'
 import CreateUser from './createUser'
 import RecoverForm from './recoverForm'
 import styled from "styled-components";
-import useForm from "../../useForm";
 
 class BareLoginForm extends react.Component {
 	constructor(props) {
