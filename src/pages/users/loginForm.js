@@ -48,7 +48,7 @@ class BareLoginForm extends react.Component {
 		fetch(`${process.env.REACT_APP_NODE_URL}login`, {
 				method: "POST",
 				mode: 'cors',
-				body: data
+				body: JSON.stringify(data)
 				}).then((response) => {
 					  console.log(response);
 					  return response.json(); // do something with response JSON
