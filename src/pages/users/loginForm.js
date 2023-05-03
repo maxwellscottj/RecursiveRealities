@@ -39,7 +39,7 @@ class BareLoginForm extends react.Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 		console.log(e.target);
-
+		console.log(e.target.name)
 		const body = e.target.body.value;
 
 		fetch(`${process.env.REACT_APP_NODE_URL}/login`, {
