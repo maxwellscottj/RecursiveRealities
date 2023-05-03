@@ -45,20 +45,14 @@ class BareLoginForm extends react.Component {
 		data.append ("name", e.target.name.value);
 		data.append ("password", e.target.password.value);
 		*/
-		const data = Array.from(e.target.elements)
-        .filter((input) => input.name)
-        .reduce(
-          (obj, input) => Object.assign(obj, { [input.name]: input.value }),
-          {}
-        );
+		const data = new FormData(e.target)
 		console.log(data);
 		
 		fetch(`${process.env.REACT_APP_NODE_URL}login`, {
 				method: "POST",
-				body: JSON.stringify(data),
-				headers: { 'Content-Type': 'application/json' },
+				body: data,
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 				mode: 'cors',
-				json: true
 				}).then((response) => {
 					  console.log(response);
 					  return response.json(); // do something with response JSON
