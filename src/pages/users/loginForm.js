@@ -51,7 +51,7 @@ class BareLoginForm extends react.Component {
 		fetch(`${process.env.REACT_APP_NODE_URL}login`, {
 				method: "POST",
 				body: JSON.stringify(data),
-				headers: { 'Content-Type': 'application/json' },
+				headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin':'https://recursive-realities.vercel.app' },
 				mode: 'cors',
 				}).then((response) => {
 					  console.log(response);
