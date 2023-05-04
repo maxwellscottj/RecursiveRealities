@@ -52,7 +52,7 @@ class BareLoginForm extends react.Component {
 				method: "POST",
 				body: data,
 				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-				cedentials: 'include',
+				credentials: 'include',
 				mode: 'cors',
 				}).then((response) => {
 					  console.log(response);
