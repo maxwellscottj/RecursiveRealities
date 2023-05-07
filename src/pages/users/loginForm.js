@@ -48,7 +48,7 @@ class BareLoginForm extends react.Component {
 		const data = (new URLSearchParams(new FormData(e.target)))
 		console.log(data);
 		
-		fetch(`${process.env.REACT_APP_NODE_URL}/login`, {
+		fetch(`${process.env.REACT_APP_NODE_URL}login`, {
 				method: "POST",
 				body: data,
 				headers: { 'Content-Type':'x-www-form-urlencoded', 'Access-Control-Request-Headers':'Content-Type' },
