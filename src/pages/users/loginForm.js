@@ -45,7 +45,7 @@ class BareLoginForm extends react.Component {
 		data.append ("name", e.target.name.value);
 		data.append ("password", e.target.password.value);
 		*/
-		const data = (new URLSearchParams(new FormData(e.target))
+		const data = (new URLSearchParams(new FormData(e.target)))
 		console.log(data);
 		
 		fetch(`${process.env.REACT_APP_NODE_URL}/login`, {
