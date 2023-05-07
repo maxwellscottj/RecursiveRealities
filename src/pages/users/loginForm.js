@@ -95,7 +95,7 @@ class BareLoginForm extends react.Component {
 					return (
 						<div className={this.props.className}>
 							<div className='menuContent'>
-								<form method="post" action={`${process.env.REACT_APP_NODE_URL}login`} onSubmit={this.handleSubmit}>
+								<form onSubmit={this.handleSubmit}>
 									<NameField name=""/>
 									<PasswordField/>
 									<input type="submit" name="submit_button" value="Login" />
