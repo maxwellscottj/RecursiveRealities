@@ -22,7 +22,7 @@ const CreateUser = () => {
 
 	return (
 	<div>
-		<form method="POST" action="/users/create">
+		<form method="POST" action=`${process.env.REACT_APP_NODE_URL}users/create`>
 			<NameField name={name}/>
 			<PasswordField/>
 			<EmailField email={email}/>
