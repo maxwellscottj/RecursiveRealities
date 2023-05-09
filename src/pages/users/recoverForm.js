@@ -13,7 +13,7 @@ class RecoverForm extends react.Component {
 	render() {
 			return (
 			<div className={this.props.className}>
-				<form method="post" action=`${process.env.REACT_APP_NODE_URL}users/recover`>
+				<form method="post" action={`${process.env.REACT_APP_NODE_URL}users/recover`}>
 					<p>A password reset link will be sent to your email.</p>
 					<EmailField/>
 					<input type="submit" name="submit_button" value="Send" />
