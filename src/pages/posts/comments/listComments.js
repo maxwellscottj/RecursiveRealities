@@ -22,7 +22,7 @@ class BareListComments extends react.Component {
 	
 	getComments() {
 		const queryParameters = new URLSearchParams(window.location.search)
-		const myreq = new Request("/comments/"+this.props.postID)
+		const myreq = new Request(`${process.env.REACT_APP_NODE_URL}comments/`+this.props.postID)
 		fetch(myreq)
 		.then(res => res.json())
 		.then(data => this.setState({comments:data, commentsLoaded:true, mode:queryParameters.get("postID")===this.props.postID&&queryParameters.get("commentID")?'display':this.state.mode}))
